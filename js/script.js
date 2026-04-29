@@ -1,5 +1,4 @@
-const getAuthBase = () =>
-  `${window.ACITY_API_BASE || `${window.ACITY_API_ORIGIN}/api/v1`}/auth`;
+const getAuthBase = () => `${window.ACITY_API_BASE}/auth`;
 
 const appendStatusElement = (form) => {
   const status = document.createElement("p");

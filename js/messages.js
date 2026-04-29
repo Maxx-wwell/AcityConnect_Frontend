@@ -24,7 +24,7 @@ let activeConversationId = null;
 let pollTimer = null;
 
 function api(path, opts = {}) {
-  const base = window.ACITY_API_BASE || "http://localhost:3000/api/v1";
+  const base = window.ACITY_API_BASE;
   return fetch(`${base}${path}`, {
     headers: {
       "Content-Type": "application/json",
