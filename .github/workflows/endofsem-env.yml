@@ -1,0 +1,36 @@
+name: EndOfSem Environment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  ACITY_API_ORIGIN: ${{ secrets.ACITY_API_ORIGIN }}
+
+jobs:
+  verify-endofsem-env:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: EndOfSem
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print EndOfSem env variable
+        run: |
+          echo "Using EndOfSem working directory: $(pwd)"
+          echo "ACITY_API_ORIGIN=$ACITY_API_ORIGIN"
+          echo "window.ACITY_API_ORIGIN = \"$ACITY_API_ORIGIN\"" > js/github-action-env.txt
+
+      - name: Confirm config file exists
+        run: |
+          if [ ! -f js/config.js ]; then
+            echo "js/config.js not found"
+            exit 1
+          fi
+          echo "Found js/config.js"
