@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-color: rgb(140, 132, 132);
+    color: #333;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: white;
+    box-shadow:0 2px 5px black ;
+}
+
+.Logo{
+    font-size: 24px ;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.hero{
+    text-align: center;
+    padding: 80px 10%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background-size: cover;
+    color: white;
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero h1{
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.login button{
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.items{
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.items h2{
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.filter{
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#categoryFilter{
+  width: 50px;
+  padding: 10px;
+}
+
+.filter input{
+    padding: 10px;
+    border: 1px solid rgb(255, 253, 253);
+    border-radius: 5px;
+}
+
+.marketplace{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    transition: transform 0.3s
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#interest{
+   width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#message{
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#message a{
+    text-decoration: none;
+    color: white;
+}
+#interest a{
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 10% 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-sec {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+
+
+.footer-sec a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+.footer-sec a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+  
+}
+
+
+.copyright{
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    margin-top: 20px;
+}
+
+.register{
+    width: max-content;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,1);
+}
+
+.register h2{
+    margin-bottom: 10px;
+    color: #cc0000;
+    text-align: center;
+}
+
+.form-grp{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-grp label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 350px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+#acc{
+    width: 30%;
+    text-align: center;
+    margin-left: 250px;
+    padding: 14px;
+  
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+#acc a{
+    text-decoration: none;
+    color: #cc0000;
+
+}
+
+.form-grp input{
+    width: 50%;
+    margin-left: 350px;
+    padding: 12px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.submit{
+    width: 45%;
+    text-align: center;
+    margin-left: 390px;
+    padding: 14px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.submit:hover{
+    background-color: #a30000;
+}
+
+.page{
+    background-color: white;
+    padding: 10px;
+}
+.page h2, h3 {
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profile-card{
+ padding: 10px;
+}
+
+.form-grup label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.form-grup input{
+    width: 50%;
+ 
+    padding: 12px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-grup{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.interest a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.create{
+    width : 300px;
+    margin : 100px auto;
+    padding : 20px;
+    background: rgb(224, 224, 214);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, textarea, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+
+}
+
+.Add-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.admin-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.admin-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+#stats {
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background: beige;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+#allListings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#adminLink {
+    background-color: grey;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#adminLink:hover {
+    background-color: grey;
+}
+
+
+
+
+.messenger-container {
+    display: flex;
+    height: 80vh; 
+    margin: 20px 10%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+
+.chat-sidebar {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.chat-sidebar h3 {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-list-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-list-item:hover {
+    background: #f0f0f0;
+}
+
+.chat-list-item.active {
+    background: #fff;
+    border-left: 5px solid #cc0000;
+}
+
+
+.chat-window {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.message-display {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.received {
+    align-self: flex-start;
+    background: white;
+    color: #333;
+    border-bottom-left-radius: 2px;
+}
+
+.sent {
+    align-self: flex-end;
+    background: #cc0000;
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+
+.msg-from {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+.time {
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+
+.message-input {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.message-input button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background: #cc0000;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}

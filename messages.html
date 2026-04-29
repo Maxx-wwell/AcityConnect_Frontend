@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages — Acity Connect</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="messenger-container">
+        <div class="chat-sidebar">
+            <a href="marketplace.html" class="back-link">← Back</a>
+            <h3>Conversations</h3>
+            <div id="convo-list"><p>Loading…</p></div>
+        </div>
+
+        <div class="chat-window">
+            <div class="chat-header" id="chat-header">
+                <h4 id="chat-title">Select a conversation</h4>
+                <span class="tag available" id="chat-subtitle"></span>
+            </div>
+
+            <div class="message-display" id="thread"></div>
+
+            <form class="message-input" id="composer">
+                <input type="text" id="msg-input" placeholder="Type your message here..." autocomplete="off">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/config.js"></script>
+    <script src="js/messages.js"></script>
+</body>
+</html>

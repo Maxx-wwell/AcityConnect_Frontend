@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="Logo">ACITY CONNECT</div>
+        <div class="links">
+            <a href="index.html"><b>Home</b></a>
+            <a href="messages.html"><b>Messages</b></a>
+            <a href="trades.html"><b>Trades</b></a>
+            <a href="profile.html"><b>Profile</b></a>
+            <a href="createlisting.html"><b>Add Item</b></a>
+            <a href="admin.html"><b>Admin</b></a>
+            <a href="index.html" id="nav-logout"><b>Logout</b></a>
+        </div>
+    </nav>
+
+    <section class="filter">
+        <input type="text" id="searchInput" placeholder="Search product or skill">
+        <select name="category" id="categoryFilter">
+            <option value="All">All</option>
+            <option value="Items">Items</option>
+            <option value="Skills">Skills</option>
+            <option value="Interest">Interested</option>
+        </select>
+    </section>
+
+    <section class="page">
+        <h1>Marketplace</h1>
+        <p>Explore the marketplace to find items and services offered by fellow Academic City students. Buy, sell, and connect with the campus community.</p>
+        <div class="grid" id="listings-grid">
+            <p>Loading listings…</p>
+        </div>
+    </section>
+    <script src="js/config.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+</html>

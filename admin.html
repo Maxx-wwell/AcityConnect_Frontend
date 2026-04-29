@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Acity Connect</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <nav>
+       
+        <div class="Logo">ACITY CONNECT</div>
+ 
+        <div class="links">
+            <a href="index.html"><b>Home</b></a>
+     
+   
+            <a href="createlisting.html"> <b>Add Item</b></a>
+            <a href="profile.html"><b>Profile</b></a>
+            <a href="index.html" id="logout-link"><b>Logout</b></a>
+        </div>
+    </nav>
+    <div class="admin-container">
+        <h2>Admin Dashboard</h2>
+
+       <div id="stats"></div>
+       <h3 id="reports-heading">User reports</h3>
+       <div id="adminReports"></div>
+       <h3>Listings</h3>
+       <div id="allListings"></div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script>
+      document.getElementById("logout-link")?.addEventListener("click", () => {
+        localStorage.removeItem("acityUser");
+        localStorage.removeItem("user");
+      });
+    </script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

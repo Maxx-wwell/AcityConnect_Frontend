@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My trades | Acity Connect</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="Logo">ACITY CONNECT</div>
+        <div class="links">
+            <a href="index.html"><b>Home</b></a>
+            <a href="marketplace.html"><b>Marketplace</b></a>
+            <a href="messages.html"><b>Messages</b></a>
+            <a href="profile.html"><b>Profile</b></a>
+            <a href="index.html" id="nav-logout-trades"><b>Logout</b></a>
+        </div>
+    </nav>
+
+    <section class="page">
+        <h1>Trades</h1>
+        <p>Pending requests, accepted trades, and completion — tied to your marketplace activity.</p>
+        <div class="grid" id="trades-list">
+            <p>Loading…</p>
+        </div>
+    </section>
+    <script src="js/config.js"></script>
+    <script>
+      document.getElementById("nav-logout-trades")?.addEventListener("click", () => {
+        localStorage.removeItem("acityUser");
+        localStorage.removeItem("user");
+      });
+    </script>
+    <script src="js/trades.js"></script>
+</body>
+</html>
