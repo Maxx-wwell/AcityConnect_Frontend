@@ -184,8 +184,8 @@ function renderCards(listings, container, user, interestedIds) {
     } else if (isOwn) {
       actionsHtml = `
       <p class="listing-meta"><small>Your listing</small></p>
-      <a class="message-btn" href="messages.html?listing=${listingQuery}">Messages</a>
-    `;
+      <button type="button" class="message-btn" onclick="window.location.href='messages.html?listing=${listingQuery}'">Messages</button>
+        `;
     } else {
       const already =
         interestedIds && interestedIds.has(item.id);
