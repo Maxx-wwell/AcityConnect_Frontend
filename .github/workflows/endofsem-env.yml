@@ -14,21 +14,24 @@ env:
 jobs:
   verify-endofsem-env:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: EndOfSem
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Print EndOfSem env variable
         run: |
-          echo "Using EndOfSem working directory: $(pwd)"
+          if [ -d EndOfSem ]; then
+            cd EndOfSem
+          fi
+          echo "Using working directory: $(pwd)"
           echo "ACITY_API_ORIGIN=$ACITY_API_ORIGIN"
           echo "window.ACITY_API_ORIGIN = \"$ACITY_API_ORIGIN\"" > js/github-action-env.txt
 
       - name: Confirm config file exists
         run: |
+          if [ -d EndOfSem ]; then
+            cd EndOfSem
+          fi
           if [ ! -f js/config.js ]; then
             echo "js/config.js not found"
             exit 1
