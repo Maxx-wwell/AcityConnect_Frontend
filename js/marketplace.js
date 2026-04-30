@@ -103,6 +103,38 @@ function bindListingActions(container, user, interestedIds) {
     });
   });
 
+  container.querySelectorAll(".delete-btn[data-listing-id]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (!isLoggedIn()) {
+        window.location.href = "login.html";
+        return;
+      }
+      const listingId = btn.getAttribute("data-listing-id");
+      if (!listingId || !user || !user.id) return;
+      if (!confirm("Delete this listing?")) return;
+
+      btn.disabled = true;
+      try {
+        const url = new URL(`${apiBase}/listings/${listingId}`);
+        url.searchParams.set("userId", user.id);
+        const res = await fetch(url.toString(), {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok)
+          throw new Error(data.message || data.error || "Delete failed");
+        btn.textContent = "Deleted";
+        btn.classList.add("disabled");
+        btn.style.opacity = "0.6";
+        btn.closest(".card")?.remove();
+      } catch (err) {
+        btn.disabled = false;
+        alert(err.message || "Delete failed");
+      }
+    });
+  });
+
   container.querySelectorAll(".report-btn[data-listing-id]").forEach((btn) => {
     btn.addEventListener("click", async () => {
       if (!isLoggedIn()) {
@@ -185,6 +217,7 @@ function renderCards(listings, container, user, interestedIds) {
       actionsHtml = `
       <p class="listing-meta"><small>Your listing</small></p>
       <button type="button" class="message-btn" onclick="window.location.href='messages.html?listing=${listingQuery}'">Messages</button>
+      <button type="button" class="delete-btn ghost" data-listing-id="${listingIdAttr}">Delete</button>
         `;
     } else {
       const already =
