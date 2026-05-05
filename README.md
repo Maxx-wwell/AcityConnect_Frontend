@@ -13,11 +13,11 @@ Interact with other users
 Admins can moderate listings and monitor activity
 
 Deployment Links
-Frontend (GitHub Pages) https://github.com/Maxx-wwell/AcityConnect_Frontend
+Frontend (GitHub Pages) https://maxx-wwell.github.io/AcityConnect_Frontend/
 
 Backend (Render) https://acityconnect-backend-9f6o.onrender.com
 
-API Test Endpoint https://acityconnect-backend-9f6o.onrender.com/api/v1/listings
+API Test Endpoint https://acityconnect-backend-9f6o.onrender.com
 
 Login Details
 Test User
